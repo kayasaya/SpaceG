@@ -178,7 +178,7 @@ jQuery(document).ready(function($){
 			$.ajax({
 		        type       : "GET",
 		        dataType   : "html",
-		        url        : modelType+".html",
+		        url        : "/" + modelType,
 		        beforeSend : function(){
 		        	self.loaded = false;
 		        	model.siblings().removeClass('loaded');
