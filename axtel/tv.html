@@ -13,9 +13,31 @@
 		</ul>
 
 		<ul class="cd-product-customizer">
-			<li data-content="20 Megas" data-price="0" class="selected"><a data-speed="20" href="#0">20 Megas</a></li>
-			<li data-content="50 Megas - $250" data-price="250"><a data-speed="50" href="#0">50 Megas - $250</a></li>
-			<li data-content="200 Megas - $550" data-price="550"><a data-speed="200" href="#0">200 Megas - $550</a></li>
+			<li data-content="Basico (2)" data-price="0" class="selected"><a data-speed="20" href="#0" style="background-image: url(/axtel/img/min20.png);background-size: 30px;background-repeat: no-repeat;background-position: center;background-color: #FFF;">Basico</a></li>
+			<li data-content="Ultra - $809  (3)" data-price="180"><a data-speed="50" href="#0" style="background-image: url(/axtel/img/min50.png);background-size: 30px;background-repeat: no-repeat;background-position: center;background-color: #FFF;">Ultra - $809</a></li>
+			<li data-content="Total HD - $989  (4)" data-price="360"><a data-speed="200" href="#0" style="background-image: url(/axtel/img/min200.png);background-size: 30px;background-repeat: no-repeat;background-position: center;background-color: #FFF;">TotalHD - $989</a></li>
+		</ul>
+        
+	</section>
+</li>
+
+<li data-selection="speed2" class="builder-step first-load">
+	<section class="cd-step-content">
+		<header>
+			<h1>Elige un paquete</h1>
+			<span class="steps-indicator">Paso <b>2</b> de 7</span>
+		</header>
+		
+		<ul class="cd-product-previews">
+			<li class="selected"><img src="/axtel/img/axtel20.png" alt="Product Preview" class="product-preview"/></li>
+			<li><img src="/axtel/img/axtel50.png" alt="Product Preview" class="product-preview"/></li>
+			<li><img src="/axtel/img/axtel200.png" alt="Product Preview" class="product-preview"/></li>
+		</ul>
+        
+		<ul class="cd-product-customizer">
+			<li data-content="20 Megas (2)" data-price="0" class="selected"><a data-speed="20" href="#0" style="background-image: url(/axtel/img/min20.png);background-size: 30px;background-repeat: no-repeat;background-position: center;background-color: #FFF;">20 Megas</a></li>
+			<li data-content="50 Megas - $675  (3)" data-price="226"><a data-speed="50" href="#0" style="background-image: url(/axtel/img/min50.png);background-size: 30px;background-repeat: no-repeat;background-position: center;background-color: #FFF;">50 Megas - $675</a></li>
+			<li data-content="200 Megas - $1225  (4)" data-price="776"><a data-speed="200" href="#0" style="background-image: url(/axtel/img/min200.png);background-size: 30px;background-repeat: no-repeat;background-position: center;background-color: #FFF;">200 Megas - $1225</a></li>
 		</ul>
 	</section>
 </li>
@@ -28,15 +50,7 @@
 		</header>
 
 		<ul class="accessories-list options-list">
-			<li class="js-option" data-price="1080">
-				<p>Router Extra</p>
-
-				<span class="price">$180</span>
-				
-				<div class="check"></div>
-			</li>
-
-			<li class="js-option" data-price="1895">
+			<li class="js-option" data-price="150">
 				<p>Telefono Extra</p>
 				
 				<span class="price">$150</span>
@@ -116,43 +130,44 @@
 <li data-selection="refer" class="builder-step first-load">
 		<section class="cd-step-content">
     <div id="form">
-        <form name="contact" action="#" method="post" id="register_form">
+        <form name="contact" action="#" method="post" id="register_form" onsubmit="event.preventDefault() & addPersInfo()">
 				<fieldset>
                     <legend>Referencia 1</legend>
 					<div class="input-container" id="first-name">
-						<input autofocus type="text" name="first-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
+						<input autofocus type="text" name="first-name-1" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
                         <label for="first-name" class="hide">Nombre(s)</label>
 					</div>
 					<div class="input-container" id="last-name">
-						<input type="text" name="last-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" title="Escriba su apellido (e.j. Perez)" required>
+						<input type="text" name="last-name-1" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" title="Escriba su apellido (e.j. Perez)" required>
                         <label for="last-name" class="hide">Apellido(s)</label>
 					</div>
 					<div class="input-container" id="first-name">
-                        <input type="tel" name="telephone" class="form-control tel" pattern="^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$" title="Enter telephone number (e.j. 555-555-5555)" required>
+                        <input type="tel" name="r-telephone-1" class="form-control tel" pattern="^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$" title="Enter telephone number (e.j. 555-555-5555)" required>
 						<label for="telephone" class="hide"><i class="glyphicon glyphicon-earphone"></i>Telefono</label>
 					</div>
                     <div class="input-container" id="last-name">
-						<input type="email" name="email" class="form-control email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" title="Por favor ponga su correo electronico (email@address.com)" required>
+						<input type="email" name="r-email-1" class="form-control email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" title="Por favor ponga su correo electronico (email@address.com)" required>
 						<label for="email" class="hide">Email</label>
 					</div>
                     </br>
                     <legend>Referencia 2</legend>
 					<div class="input-container" id="first-name">
-						<input autofocus type="text" name="first-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
+						<input autofocus type="text" name="first-name-2" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
                         <label for="first-name" class="hide">Nombre(s)</label>
 					</div>
 					<div class="input-container" id="last-name">
-						<input type="text" name="last-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" title="Escriba su apellido (e.j. Perez)" required>
+						<input type="text" name="last-name-2" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" title="Escriba su apellido (e.j. Perez)" required>
                         <label for="last-name" class="hide">Apellido(s)</label>
 					</div>
 					<div class="input-container" id="first-name">
-                        <input type="tel" name="telephone" class="form-control tel" pattern="^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$" title="Enter telephone number (e.j. 555-555-5555)" required>
+                        <input type="tel" name="r-telephone-2" class="form-control tel" pattern="^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$" title="Enter telephone number (e.j. 555-555-5555)" required>
 						<label for="telephone" class="hide"><i class="glyphicon glyphicon-earphone"></i>Telefono</label>
 					</div>
                     <div class="input-container" id="last-name">
-						<input type="email" name="email" class="form-control email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" title="Por favor ponga su correo electronico (email@address.com)" required>
+						<input type="email" name="r-email-2" class="form-control email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" title="Por favor ponga su correo electronico (email@address.com)" required>
 						<label for="email" class="hide">Email</label>
 					</div>
+                <button type="submit">Validar Informacion</button>
             </form>
             </div>    
     </section>
@@ -188,10 +203,10 @@
 				</span>
 			</li>
 
-			<li data-summary="extras">
+			<li data-summary="accessories">
 				<h2>Extras</h2>
 
-				<ul class="summary-extras">
+				<ul class="summary-accessories">
 					<li>
 						<p>Uconnect 6.5" colour touchscreen radio navigation sytem with Bluetooth &amp; DAB ($1050)</p>
 					</li>
@@ -226,18 +241,27 @@
         </table>
 				</ul>
 			</li>
-            <li data-summary="infopersonal">
+            <li data-summary="informacionref">
 				<h2>Referencias</h2>
+            <ul class="summary-informacionref">
+        <table id="inforef">
+            <thead>
+                <tr style="background-color:rgba(201, 196, 196, 0.86)">
+                    <th style="width: 150px;">Nombre</th>
+                    <th style="width: 150px;">Apellido</th>
+                    <th style="width: 150px;">Telefono</th>
+                    <th style="width: 150px;">Email</th>
+                    <th style="width: 150px;">Nombre</th>
+                    <th style="width: 150px;">Apellido</th>
+                    <th style="width: 150px;">Telefono</th>
+                    <th style="width: 150px;">Email</th>
+                    <th style="width: 120px class=fa fa-trash"></th>
+                </tr>
 
-				<ul class="summary-infopersonal">
-					<li>
-						<p>Nombre: </p><span id='i-name-input'></span>
-					</li>
+            </thead>
+            <tbody></tbody>
+        </table>
 
-					<li>
-						<p>Audio &amp; telephone controls on steering wheels ($750)</p>
-					</li>
-				</ul>
 			</li>
 		</ul>
 	</section>
@@ -296,6 +320,48 @@
                             document.getElementById("pInfoTable").deleteRow(0);
                         }
                     }
+    
+                    var fn1 = [];
+                    var ln1 = [];
+                    var rt1 = [];
+                    var et1 = [];
+                    var fn2 = [];
+                    var ln2 = [];
+                    var rt2 = [];
+                    var et2 = [];
+                    var rowCount = 1;
+                    function addPersInfo() {
+                        var temp = 'style .fa fa-trash';
+                        fn1.push(document.getElementById("first-name-1").value);
+                        ln1.push(document.getElementById("last-name-1").value);
+                        rt1.push(document.getElementById("r-telephone-1").value);
+                        et1.push(document.getElementById("r-email-1").value);
+                        fn2.push(document.getElementById("first-name-2").value);
+                        ln2.push(document.getElementById("last-name-2").value);
+                        rt2.push(document.getElementById("r-telephone-2").value);
+                        et2.push(document.getElementById("r-email-2").value);
+                        var table = document.getElementById("pInfoTable");
+                        var row = table.insertRow(rowCount);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
+                        var cell5 = row.insertCell(4);
+                        var cell6 = row.insertCell(5);
+                        var cell7 = row.insertCell(6);
+                        var cell8 = row.insertCell(7);
+                        cell1.innerHTML = fn1[rowCount - 1];
+                        cell2.innerHTML = ln1[rowCount - 1];
+                        cell3.innerHTML = rt1[rowCount - 1];
+                        cell4.innerHTML = et1[rowCount - 1];
+                        cell5.innerHTML = fn2[rowCount - 1];
+                        cell6.innerHTML = ln2[rowCount - 1];
+                        cell7.innerHTML = rt2[rowCount - 1];
+                        cell8.innerHTML = et2[rowCount - 1];
+                        cell9.innerHTML='<td class="fa fa-trash"></td>';
+                        rowCount++;
+                    }
+
     
                     
                     var date = document.getElementById('dob');
