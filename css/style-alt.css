@@ -101,7 +101,6 @@ header[role=banner]::after {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
-    margin-left: calc(50% - 313px);
   }
   header[role=banner] #cd-logo img {
     display: block;
@@ -137,7 +136,7 @@ header[role=secondnav] a {
     color: #FFF
 }
 .main-nav {
-  float: left;
+  float: right;
   width: 45px;
   height: 100%;
   background: url("../img/cd-icon-profile.png") no-repeat center center;
@@ -539,7 +538,7 @@ xsigin/signup popup
 #cd-menu-trigger .cd-menu-icon {
   display: inline-block;
   position: absolute;
-  left: 15px;
+  left: 75px;
   top: 10px;
   bottom: auto;
   right: auto;
