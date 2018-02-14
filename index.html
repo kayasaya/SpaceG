@@ -47,8 +47,8 @@
 	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
 		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
 			<ul class="cd-switcher">
-				<li><a href="#0">Sign in</a></li>
-				<li><a href="#0">New account</a></li>
+				<li><a href="#0">Iniciar sesión</a></li>
+				<li><a href="#0">Nueva Cuenta</a></li>
 			</ul>
 
 			<div id="cd-login"> <!-- log in form -->
@@ -56,19 +56,19 @@
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">E-mail</label>
 						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
+						<span class="cd-error-message">Corre electronico no registrado!</span>
 					</p>
 
 					<p class="fieldset">
-						<label class="image-replace cd-password" for="signin-password">Password</label>
-						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
-						<a href="#0" class="hide-password">Hide</a>
-						<span class="cd-error-message">Error message here!</span>
+						<label class="image-replace cd-password" for="signin-password">Contraseña</label>
+						<input class="full-width has-padding has-border " id="signin-password" type="password"  placeholder="Contraseña">
+						<a href="#0" class="hide-password">Mostrar</a>
+						<span class="cd-error-message">Contraseña incorrecta!</span>
 					</p>
 
 					<p class="fieldset">
 						<input type="checkbox" id="remember-me" checked>
-						<label for="remember-me">Remember me</label>
+						<label for="remember-me">Recuerdame</label>
 					</p>
 
 					<p class="fieldset">
@@ -76,7 +76,7 @@
 					</p>
 				</form>
 				
-				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+				<p class="cd-form-bottom-message"><a href="#0">¿Olvidaste tu contraseña?</a></p>
 				<!-- <a href="#0" class="cd-close-form">Close</a> -->
 			</div> <!-- cd-login -->
 
@@ -84,7 +84,7 @@
 				<form class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-username" for="signup-username">Username</label>
-						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombre de usuario">
 						<span class="cd-error-message">Error message here!</span>
 					</p>
 
@@ -96,18 +96,18 @@
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signup-password">Password</label>
-						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
-						<a href="#0" class="hide-password">Hide</a>
+						<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Contraseña">
+						<a href="#0" class="hide-password">Mostrar</a>
 						<span class="cd-error-message">Error message here!</span>
 					</p>
 
 					<p class="fieldset">
 						<input type="checkbox" id="accept-terms">
-						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+						<label for="accept-terms">Acepto los <a href="#0">Terminos y condiciones</a></label>
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Create account">
+						<input class="full-width has-padding" type="submit" value="Crear Cuenta">
 					</p>
 				</form>
 
@@ -115,21 +115,21 @@
 			</div> <!-- cd-signup -->
 
 			<div id="cd-reset-password"> <!-- reset password form -->
-				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+				<p class="cd-form-message">¿Olvidaste tu contraseña? Por favor escribe tu corre electronico. Recibiar un link para una nueva contraseña.</p>
 
 				<form class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="reset-email">E-mail</label>
 						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
+						<span class="cd-error-message">Correo electronico no registrado!</span>
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Reset password">
+						<input class="full-width has-padding" type="submit" value="Recuperar Contraseña">
 					</p>
 				</form>
 
-				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+				<p class="cd-form-bottom-message"><a href="#0">Regresar al inicio de sesión</a></p>
 			</div> <!-- cd-reset-password -->
 			<a href="#0" class="cd-close-form">Close</a>
 		</div> <!-- cd-user-modal-container -->
@@ -173,15 +173,13 @@
 	</nav>
     <!-- Espacio publicitario -->
     <div class="wrap">
-        <button onclick="prev()"><img src="/index/img/cd-icon-left.png" id="btnimg"></button>
+        <!--<button onclick="prev()"><img src="/index/img/cd-icon-left.png" id="btnimg"></button>-->
         <div class="scroller">
             <ul class="items">
                 <li class="item" style="background-image:url(/index/img/banner1920x216.png);"></li>
-                <li class="item" style="background-image:url(https://farm3.staticflickr.com/2937/14371160993_186df4a083_b.jpg);"></li>
-                <li class="item" style="background-image:url(https://farm3.staticflickr.com/2914/14185397280_e51c40b1df_b.jpg);"></li>
             </ul>
         </div>
-        <button onclick="next()" class="right"><img src="/index/img/cd-icon-right.png" id="btnimg"></button>
+        <!--<button onclick="next()" class="right"><img src="/index/img/cd-icon-right.png" id="btnimg"></button>-->
     </div> 
     <!-- Seccion de contenido -->
     <div class="cd-main-content">

@@ -104,8 +104,8 @@ header[role=banner]::after {
   }
   header[role=banner] #cd-logo img {
     display: block;
-    max-width: 66px;
-    margin-top: 0;
+    max-width: 100px;
+    margin: 10px 50px;
   }
 }
 
@@ -538,14 +538,14 @@ xsigin/signup popup
 #cd-menu-trigger .cd-menu-icon {
   display: inline-block;
   position: absolute;
-  left: 75px;
-  top: 10px;
+  left: 10px;
+  top: 15px;
   bottom: auto;
   right: auto;
   background-image: url(../img/cd-icon-menu.png);
-  background-size: 40px;
-  width: 40px;
-  height: 40px;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
 }
 #cd-menu-trigger .cd-menu-icon::before, #cd-menu-trigger .cd-menu-icon:after {
   content: '';
@@ -565,7 +565,7 @@ xsigin/signup popup
   background-color: rgba(255, 255, 255, 0);
 }
 #cd-menu-trigger.is-clicked .cd-menu-icon::before, #cd-menu-trigger.is-clicked .cd-menu-icon::after {
-  background-color: #1b1b1b;
+  background-color: #2c2c2c;
 }
 #cd-menu-trigger.is-clicked .cd-menu-icon::before {
   bottom: 0;
@@ -574,9 +574,9 @@ xsigin/signup popup
 #cd-menu-trigger.is-clicked .cd-menu-icon::after {
   top: 0;
   background-image: url(../img/cd-icon-close.png);
-  background-size: 40px;
-  width: 40px;
-  height: 40px;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
 }
 @media only screen and (min-width: 1025px) {
   #cd-menu-trigger {
