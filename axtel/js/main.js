@@ -209,6 +209,7 @@ jQuery(document).ready(function($){
 
 			//update price (no adding/removing)
 			this.totPriceWrapper.text(model.data('price'));
+            
 		} else {
 			//no model has been selected
 			this.fixedSummary.add(this.mainNavigation).addClass('disabled');
@@ -235,8 +236,7 @@ jQuery(document).ready(function($){
 	ProductBuilder.prototype.updatePrice = function(price) {
 		var actualPrice = Number(this.totPriceWrapper.text()) + price;
 		this.totPriceWrapper.text(actualPrice);
-	};
-
+    };
 	if( $('.cd-product-builder').length > 0 ) {
 		$('.cd-product-builder').each(function(){
 			//create a productBuilder object for each .cd-product-builder

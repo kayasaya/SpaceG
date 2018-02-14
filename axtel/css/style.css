@@ -564,7 +564,8 @@ Speed Step - style
 }
 
 .cd-product-customizer {
-  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .cd-product-customizer li {
   position: relative;
@@ -634,7 +635,8 @@ Speed Step - style
 }
 @media only screen and (min-width: 768px) {
   .cd-product-customizer li {
-    margin-right: 1em;
+    margin-right: 1.95em;
+    margin-bottom: 1em;
   }
   .cd-product-customizer a {
     height: 50px;
@@ -1565,4 +1567,15 @@ form input[type=date]::-webkit-datetime-edit-day-field {
 form input[type=date]::-webkit-datetime-edit-year-field {
     -webkit-appearance: none;
     display: none;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 10px;
+}
+
+.esp-title{
+    width: 80px;
+    float:  left;
+    margin-top: 18px;
 }
