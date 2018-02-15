@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="/axtel/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="/index/css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="/index/css/style-alt.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="/axtel/css/extra.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="/axtel/css/style.css"> <!-- Resource style -->
   	
 	<title>SpaceGaming | Axtel</title>
@@ -14,6 +15,7 @@
 <div class="cd-product-builder">
         <!-- Header -->
 	<header role="banner">
+        <div id="cd-logo"><a href="#0"><img src="/index/img/cd-logo.png" alt="Logo"></a></div>
         <nav>
             <ul>
                 <li><a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a></li>
@@ -25,10 +27,23 @@
 				<li><a class="cd-signin" href="#0">Iniciar sesion</a></li>
 			</ul>
 		</nav>
-        
-		<div id="cd-logo"><a href="#0"><img src="/index/img/cd-logo.png" alt="Logo"/></a></div>
-
 	</header>
+    <!-- Submenu -->
+    <header role="secondnav">
+    			<ul>
+				<!-- inser more links here -->
+				<li><a href="#0">Noticias</a></li>
+                <li><a>|</a></li>
+				<li><a href="#0">Comunidad</a></li>
+                <li><a>|</a></li>
+                <li><a href="#0">Canal</a></li>
+                <li><a>|</a></li>
+                <li><a href="#0">Eventos</a></li>
+                <li><a>|</a></li>
+                <li><a href="/axtel">Axtel</a></li>
+			</ul>
+    </header>
+
     <!-- Submenu -->
     <header class="main-header">
 		<nav class="cd-builder-main-nav disabled">
@@ -81,10 +96,9 @@
 			<div class="tot-price">
 				<span>Total</span>
 				<span class="total">$<b>0</b></span>
-                <span>Terminos y condiciones</span>
+                <span style="cursor: pointer" onclick="document.getElementById('id01').style.display='block'">Términos y condiciones</span>
 			</div>
-		</div>
-		
+		</div>   
 		<nav class="cd-builder-secondary-nav">
 			<ul>
 				<li class="next nav-item">
@@ -110,6 +124,24 @@
 
 		<span class="alert">Porfavor eliga un plan!</span>
 	</footer>
+    <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Términos y Condiciones</h2>
+      </header>
+      <div class="w3-container">
+        <p>De Axtel X-tremo:<br/>
+            (1) Los minutos ilimitados a celular 044/045 en los paquetes de Residencial, son válidos exclusivamente para la línea principal del paquete.En cumplimiento de la Ley Federal de Telecomunicaciones y Radiodifusión la tarifa por minuto de Larga Distancia Nacional a números fijos será de $0. Las llamadas Locales y Nacionales ilimitadas aplicaran a números fijos. Las llamadas Internacionales incluidas en los paquetes aplican a un número limitado de países, incluyendo EUA y Canadá, para consultar el listado de países incluidos ver detalle de Términos y Condiciones en axtel.mx Aplica pronto pago, en cargo recurrente a Tarjeta de Crédito, o en pago en efectivo máximo 12 días después de la fecha de corte de la factura, bonificación aplicable a partir de la segunda factura. Precios sin Pronto Pago (2) $479 (3) $775 (4) $1,399. *Aplica promoción de incremento de velocidad por 6 meses: Al contratar 20 Mbps el cliente obtiene 50 Mbps. Al contratar 50 Mbps el cliente obtiene 100 Mbps. No aplica para la velocidad de 200 Mbps. Aplica promoción solo para comunicada gaming al contratar por este medio. No aplica plazo forzoso: En caso de que el cliente termine sus servicios, deberá cubrir el saldo pendiente del ciclo de facturación en el cual solicitó la terminación. Servicio sujeto a factibilidad física y técnica. El servicio de Internet de Banda Ancha tendrá hasta el máximo de la velocidad contratada en cada oferta medida en forma alámbrica. La velocidad inalámbrica dependerá de las características que tenga el equipo del usuario, del servidor donde se descarga la información y de la posible existencia de interferencia de otros aparatos electrónicos o redes inalámbricas en el domicilio, así como de los materiales de construcción y mobiliario del lugar. Para alcanzar los 200 megas de velocidad, los equipos de cómputo deben conectarse al ruteador de forma alámbrica, para lograrlo de forma inalámbrica se podrá adquirir un ruteador con costo adicional (preguntar al vendedor). Máximo 6 líneas por cuenta facturable. El número de canales están sujetos a cambio sin previo aviso. Promoción limitada a 1,000 contrataciones de Axtel TV/X-tremo Residencial. Vigencia al 31 de Diciembre del 2017. Términos y Condiciones en axtel.mx</p>
+        <p>De Atel TV:<br/>
+            Precios incluyen impuestos. (1)Los minutos ilimitados a celular 044/045 en los paquetes de Residencial, son válidos exclusivamente para la línea principal del paquete. En cumplimiento de la Ley Federal de Telecomunicaciones y Radiodifusión la tarifa por minuto de Larga Distancia Nacional a números fijos será de $0. Las llamadas Locales y Nacionales ilimitadas aplicaran a números fijos. Las llamadas Internacionales incluidas en los paquetes aplican a un número limitado de países, incluyendo EUA y Canadá, para consultar el listado de países incluidos ver detalle de Términos y Condiciones en axtel.mx. Aplica pronto pago, en cargo recurrente a Tarjeta de Crédito, o en pago en efectivo máximo 12 días después de la fecha de corte de la factura, bonificación aplicable a partir de la segunda factura. Precios regular sin pronto pago en los paquetes de Axtel TV con 20 Megas (2) $685 (3) $853 (4) $1,085. Precios regular sin pronto pago en los paquetes de Axtel TV con 50 Megas (5) $987 (5) $1,151 (7) $1,360. Precios regular sin pronto pago en los paquetes de Axtel TV con 200 Megas (8) $1,607 (9) $1,789 (10) $1,960 No aplica plazo forzoso: En caso de que el cliente termine sus servicios, deberá cubrir el saldo pendiente del ciclo de facturación en el cual solicitó la terminación. Servicio sujeto a factibilidad física y técnica. El servicio de Internet de Banda Ancha tendrá hasta el máximo de la velocidad contratada en cada oferta medida en forma alámbrica. La velocidad inalámbrica dependerá de las características que tenga el equipo del usuario, del servidor donde se descarga la información y de la posible existencia de interferencia de otros aparatos electrónicos o redes inalámbricas en el domicilio, así como de los materiales de construcción y mobiliario del lugar. Para alcanzar los 200 megas de velocidad, los equipos de cómputo deben conectarse al ruteador de forma alámbrica, para lograrlo de forma inalámbrica se podrá adquirir un ruteador con costo adicional (preguntar al vendedor). Máximo 6 líneas por cuenta facturable. El número de canales están sujetos a cambio sin previo aviso. Promoción limitada a 1,000 contrataciones de Axtel TV/X-tremo Residencial. Vigencia al 30 de septiembre de 2017. Términos y Condiciones en axtel.mx</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal Footer</p>
+      </footer>
+    </div>
+  </div>
 </div>
 <script src="/axtel/js/jquery-3.0.0.min.js"></script>
 <script src="/axtel/js/main.js"></script> <!-- Resource jQuery -->

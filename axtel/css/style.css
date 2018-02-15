@@ -197,7 +197,7 @@ Step content - basic style
   -webkit-transition: border-color .3s;
   /* transition: border-color .3s; */
   background: #FFF;
-  box-shadow: -2px -2px 4px #4281FF, 2px 2px 4px #4281FF, inset 2px 2px 4px #d584ff, inset -2px -2px 4px #D584FF;
+  box-shadow: -2px -2px 4px #4281FF, 2px 2px 4px #4281FF;
 }
 .cd-step-content .options-list > li.selected {
   border-color: #FFB500;
@@ -476,7 +476,7 @@ Models Step - style
 }
 .cd-builder-steps .models-list .price {
   display: block;
-  color: #5D7C89;
+  color: #e53335;
   margin-bottom: 1em;
 }
 .cd-builder-steps .models-list .selected .radio::before {
@@ -539,8 +539,11 @@ Speed Step - style
   left: 0;
   width: 100%;
   opacity: 0;
-    background-color: #FFF;
-    border-radius: 5px
+  background-color: #FFF;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #e53335;
+  padding: 1.5rem;
 }
 .cd-product-previews > li.selected {
   position: relative;
