@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="/index/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/index/css/style-alt.css"> <!-- Gem style -->
+	<script src="/index/js/modernizr.js"></script> <!-- Mod*ernizr -->
+  	
+	<title>Space Gaming</title>
+</head>
+<body>
+    <!-- Header -->
+	<header role="banner">
+        <div id="cd-logo"><a href="#0"><img src="/index/img/cd-logo.png" alt="Logo"></a></div>
+        <nav>
+            <ul>
+                <li><a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a></li>
+            </ul>
+        </nav>
+        <nav class="main-nav">
+            <ul>
+        	   <!-- inser more links here -->
+				<li><a class="cd-signin" href="#0">Iniciar sesion</a></li>
+			</ul>
+		</nav>
+	</header>
+    <!-- Submenu -->
+    <header role="secondnav">
+    			<ul>
+				<!-- inser more links here -->
+				<li><a href="#0">Noticias</a></li>
+                <li><a>|</a></li>
+				<li><a href="#0">Comunidad</a></li>
+                <li><a>|</a></li>
+                <li><a href="#0">Canal</a></li>
+                <li><a>|</a></li>
+                <li><a href="#0">Eventos</a></li>
+                <li><a>|</a></li>
+                <li><a href="/axtel">Axtel</a></li>
+			</ul>
+    </header>
+    <!-- Login de usuario -->
+	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Iniciar sesión</a></li>
+				<li><a href="#0">Nueva Cuenta</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Corre electronico no registrado!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Contraseña</label>
+						<input class="full-width has-padding has-border " id="signin-password" type="password"  placeholder="Contraseña">
+						<a href="#0" class="hide-password">Mostrar</a>
+						<span class="cd-error-message">Contraseña incorrecta!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Recuerdame</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Login">
+					</p>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">¿Olvidaste tu contraseña?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombre de usuario">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Contraseña">
+						<a href="#0" class="hide-password">Mostrar</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">Acepto los <a href="#0">Terminos y condiciones</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Crear Cuenta">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">¿Olvidaste tu contraseña? Por favor escribe tu corre electronico. Recibiar un link para una nueva contraseña.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Correo electronico no registrado!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Recuperar Contraseña">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Regresar al inicio de sesión</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> 
+    <!-- Seccion del menu lateral -->
+	<nav id="cd-lateral-nav">
+		<ul class="cd-navigation">
+			<li class="item-has-children">
+				<a href="#0">Cuenta</a>
+				<ul class="sub-menu">
+					<li><a href="#0">Iniciar sesion</a></li>
+					<li><a href="#0">Registrarse</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+
+			<li class="item-has-children">
+				<a href="#0">Afiliados</a>
+				<ul class="sub-menu">
+					<li><a href="#0">Axtel</a></li>
+					<li><a href="#0">Gamelta</a></li>
+					<li><a href="#0">Twitch</a></li>
+					<li><a href="#0">HyperX</a></li>
+					<li><a href="#0">GamePlanet</a></li>
+					<li><a href="#0">Xbox</a></li>
+					<li><a href="#0" class="current">Afiliate!</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+
+		<ul class="cd-navigation cd-single-item-wrapper">
+			<li><a href="#0">Tour de la pagina</a></li>
+			<li><a href="#0">Support</a></li>
+		</ul> <!-- cd-single-item-wrapper -->
+
+		<div class="cd-navigation socials">
+			<a class="cd-twitter cd-img-replace" href="#0"></a>
+			<a class="cd-github cd-img-replace" href="#0"></a>
+			<a class="cd-facebook cd-img-replace" href="#0"></a>
+			<a class="cd-google cd-img-replace" href="#0"></a>
+		</div> <!-- socials -->
+        </ul>
+	</nav>
+    <!-- Espacio publicitario -->
+    <div class="wrap">
+        <!--<button onclick="prev()"><img src="/index/img/cd-icon-left.png" id="btnimg"></button>-->
+        <div class="scroller">
+            <ul class="items">
+                <li class="item" style="background-image:url(/index/img/banner1920x216.png);"></li>
+            </ul>
+        </div>
+        <!--<button onclick="next()" class="right"><img src="/index/img/cd-icon-right.png" id="btnimg"></button>-->
+    </div> 
+    <!-- Seccion de contenido -->
+    <div class="cd-main-content">
+        <div class="container">
+            <div class="card">
+                <header>Novedades de Starwars Battlefront</header>
+                <div class="image"><img src="/index/img/blog/kaylo_ren_lighsaber_800x600_1x.png"></div>
+                <div class="transcript">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a augue ac dolor ultrices finibus. Aliquam euismod justo sollicitudin, tincidunt augue ac, pharetra odio. Nullam pretium convallis nibh eu ornare. Duis nec euismod erat. Nulla facilisi. Praesent eleifend, nisi id viverra auctor, urna sapien luctus magna, vitae tempor metus nunc vitae risus...
+                    </p>
+                </div>
+                <div class="footy">
+                    <img src="/index/img/cd-read.png">
+                    <img src="/index/img/cd-add-fav.png">
+                    <img src="/index/img/cd-follow.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="card">
+                <header>Novedades de Starwars Battlefront</header>
+                <div class="image"><img src="/index/img/blog/kaylo_ren_lighsaber_800x600_1x.png"></div>
+                <div class="transcript">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a augue ac dolor ultrices finibus. Aliquam euismod justo sollicitudin, tincidunt augue ac, pharetra odio. Nullam pretium convallis nibh eu ornare. Duis nec euismod erat. Nulla facilisi. Praesent eleifend, nisi id viverra auctor, urna sapien luctus magna, vitae tempor metus nunc vitae risus...
+                    </p>
+                </div>
+                <div class="footy">
+                    <img src="/index/img/cd-read.png">
+                    <img src="/index/img/cd-add-fav.png">
+                    <img src="/index/img/cd-follow.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="card">
+                <header>Novedades de Starwars Battlefront</header>
+                <div class="image"><img src="/index/img/blog/kaylo_ren_lighsaber_800x600_1x.png"></div>
+                <div class="transcript">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a augue ac dolor ultrices finibus. Aliquam euismod justo sollicitudin, tincidunt augue ac, pharetra odio. Nullam pretium convallis nibh eu ornare. Duis nec euismod erat. Nulla facilisi. Praesent eleifend, nisi id viverra auctor, urna sapien luctus magna, vitae tempor metus nunc vitae risus...
+                    </p>
+                </div>
+                <div class="footy">
+                    <img src="/index/img/cd-read.png">
+                    <img src="/index/img/cd-add-fav.png">
+                    <img src="/index/img/cd-follow.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="card">
+                <header>Novedades de Starwars Battlefront</header>
+                <div class="image"><img src="/index/img/blog/kaylo_ren_lighsaber_800x600_1x.png"></div>
+                <div class="transcript">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a augue ac dolor ultrices finibus. Aliquam euismod justo sollicitudin, tincidunt augue ac, pharetra odio. Nullam pretium convallis nibh eu ornare. Duis nec euismod erat. Nulla facilisi. Praesent eleifend, nisi id viverra auctor, urna sapien luctus magna, vitae tempor metus nunc vitae risus...
+                    </p>
+                </div>
+                <div class="footy">
+                    <img src="/index/img/cd-read.png">
+                    <img src="/index/img/cd-add-fav.png">
+                    <img src="/index/img/cd-follow.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="card">
+                <header>Novedades de Starwars Battlefront</header>
+                <div class="image"><img src="/index/img/blog/kaylo_ren_lighsaber_800x600_1x.png"></div>
+                <div class="transcript">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a augue ac dolor ultrices finibus. Aliquam euismod justo sollicitudin, tincidunt augue ac, pharetra odio. Nullam pretium convallis nibh eu ornare. Duis nec euismod erat. Nulla facilisi. Praesent eleifend, nisi id viverra auctor, urna sapien luctus magna, vitae tempor metus nunc vitae risus...
+                    </p>
+                </div>
+                <div class="footy">
+                    <img src="/index/img/cd-read.png">
+                    <img src="/index/img/cd-add-fav.png">
+                    <img src="/index/img/cd-follow.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="card">
+                <header>Novedades de Starwars Battlefront</header>
+                <div class="image"><img src="/index/img/blog/kaylo_ren_lighsaber_800x600_1x.png"></div>
+                <div class="transcript">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a augue ac dolor ultrices finibus. Aliquam euismod justo sollicitudin, tincidunt augue ac, pharetra odio. Nullam pretium convallis nibh eu ornare. Duis nec euismod erat. Nulla facilisi. Praesent eleifend, nisi id viverra auctor, urna sapien luctus magna, vitae tempor metus nunc vitae risus...
+                    </p>
+                </div>
+                <div class="footy">
+                    <img src="/index/img/cd-read.png">
+                    <img src="/index/img/cd-add-fav.png">
+                    <img src="/index/img/cd-follow.png">
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/index/js/main.js"></script> <!-- Gem jQuery -->
+</body>
+</html>
