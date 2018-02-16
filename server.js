@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
 	res.sendFile(__dirname + "/index.html")
 })
 
+app.get("/beta", (req, res) => {
+	res.sendFile(__dirname + "/index_beta.html")
+})
+
 app.get("/axtel", (req, res) => {
 	res.sendFile(__dirname + "/axtel/index.html")
 })
