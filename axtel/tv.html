@@ -206,27 +206,26 @@
 				</ul>
 			</li>
             <li data-summary="informacionref">
-				<h2>Referencias</h2>
-            <ul class="summary-informacionref">
-        <table id="inforef">
-            <thead>
-                <tr style="background-color:rgba(201, 196, 196, 0.86)">
-                    <th style="width: 150px;">Nombre</th>
-                    <th style="width: 150px;">Apellido</th>
-                    <th style="width: 150px;">Telefono</th>
-                    <th style="width: 150px;">Email</th>
-                    <th style="width: 150px;">Nombre</th>
-                    <th style="width: 150px;">Apellido</th>
-                    <th style="width: 150px;">Telefono</th>
-                    <th style="width: 150px;">Email</th>
-                    <th style="width: 120px class=fa fa-trash"></th>
-                </tr>
-
-            </thead>
-            <tbody></tbody>
-        </table>
-
-			</li>
+                <h2>Referencias</h2>
+                <ul class="summary-informacionref">
+                    <table id="pInfoRef">
+                        <thead>
+                            <tr style="background-color:rgba(201, 196, 196, 0.86)">
+                                <th style="width: 150px;">Nombre</th>
+                                <th style="width: 150px;">Apellido</th>
+                                <th style="width: 150px;">Telefono</th>
+                                <th style="width: 150px;">Email</th>
+                                <th style="width: 150px;">Nombre</th>
+                                <th style="width: 150px;">Apellido</th>
+                                <th style="width: 150px;">Telefono</th>
+                                <th style="width: 150px;">Email</th>
+                                <th style="width: 120px class=fa fa-trash"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </ul>
+            </li>
 		</ul>
 	</section>
 </li>
@@ -243,6 +242,14 @@
                     var edo = [];
                     var telep = [];
                     var mail = [];
+                    var fn1 = [];
+                    var ln1 = [];
+                    var rt1 = [];
+                    var et1 = [];
+                    var fn2 = [];
+                    var ln2 = [];
+                    var rt2 = [];
+                    var et2 = [];
                     var rowCount = 1;
                     function addPersInfo() {
                         var temp = 'style .fa fa-trash';
@@ -280,51 +287,9 @@
                         cell10.innerHTML = mail[rowCount - 1];
                         cell11.innerHTML='<td class="fa fa-trash"></td>';
                         rowCount++;
-                        if(rowCount > 10) {   
-                            document.getElementById("pInfoTable").deleteRow(0);
-                        }
                     }
     
-                    var fn1 = [];
-                    var ln1 = [];
-                    var rt1 = [];
-                    var et1 = [];
-                    var fn2 = [];
-                    var ln2 = [];
-                    var rt2 = [];
-                    var et2 = [];
-                    var rowCount = 1;
-                    function addPersInfo() {
-                        var temp = 'style .fa fa-trash';
-                        fn1.push(document.getElementById("first-name-1").value);
-                        ln1.push(document.getElementById("last-name-1").value);
-                        rt1.push(document.getElementById("r-telephone-1").value);
-                        et1.push(document.getElementById("r-email-1").value);
-                        fn2.push(document.getElementById("first-name-2").value);
-                        ln2.push(document.getElementById("last-name-2").value);
-                        rt2.push(document.getElementById("r-telephone-2").value);
-                        et2.push(document.getElementById("r-email-2").value);
-                        var table = document.getElementById("pInfoTable");
-                        var row = table.insertRow(rowCount);
-                        var cell1 = row.insertCell(0);
-                        var cell2 = row.insertCell(1);
-                        var cell3 = row.insertCell(2);
-                        var cell4 = row.insertCell(3);
-                        var cell5 = row.insertCell(4);
-                        var cell6 = row.insertCell(5);
-                        var cell7 = row.insertCell(6);
-                        var cell8 = row.insertCell(7);
-                        cell1.innerHTML = fn1[rowCount - 1];
-                        cell2.innerHTML = ln1[rowCount - 1];
-                        cell3.innerHTML = rt1[rowCount - 1];
-                        cell4.innerHTML = et1[rowCount - 1];
-                        cell5.innerHTML = fn2[rowCount - 1];
-                        cell6.innerHTML = ln2[rowCount - 1];
-                        cell7.innerHTML = rt2[rowCount - 1];
-                        cell8.innerHTML = et2[rowCount - 1];
-                        cell9.innerHTML='<td class="fa fa-trash"></td>';
-                        rowCount++;
-                    }
+                    
 
     
                     
