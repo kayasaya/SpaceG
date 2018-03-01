@@ -173,6 +173,7 @@ Step content - basic style
   /* this is the animation of a section moving right (go back to a prev step) - selection already made */
   -webkit-animation: cd-center-to-right .5s 0s backwards;
           animation: cd-center-to-right .5s 0s backwards;
+  margin-top: 5em;
 }
 .cd-step-content header {
   position: relative;
@@ -480,6 +481,7 @@ Models Step - style
   display: block;
   color: #e53335;
   margin-bottom: 1em;
+  font-size: 2em;
 }
 .cd-builder-steps .models-list .selected .radio::before {
   /* show a loading animation while you wait for the HTML to be loaded */
@@ -546,6 +548,7 @@ Speed Step - style
   font-size: 1em;
   color: #e53335;
   padding: 1.5rem;
+  font-size: 2em;
 }
 .cd-product-previews > li.selected {
   position: relative;
