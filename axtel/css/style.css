@@ -1210,7 +1210,7 @@ form legend {
   text-align: center;
   color: #71767C;
   border-bottom: 1px solid #71767C;
-  /* width: 100%; */
+  width: 100%;
   line-height: 2em;
 }
 form .input-container {
