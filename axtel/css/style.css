@@ -736,7 +736,6 @@ Summary Step - style
 -------------------------------- */
 .cd-builder-steps .summary-list > li {
   position: relative;
-  margin: 2em 0;
 }
 .cd-builder-steps .summary-list h2 {
   text-transform: uppercase;
@@ -803,7 +802,6 @@ Summary Step - style
     text-align: center;
   }
   .cd-builder-steps .summary-list > li {
-    margin: 0 0 4.5em;
   }
   .cd-builder-steps .summary-list h2 {
     font-size: 1.8rem;
