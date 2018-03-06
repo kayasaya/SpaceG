@@ -16,9 +16,10 @@ html * {
 
 body {
   font-size: 100%;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #1A1A1A;
-  background-color: #dee0e3;
+  background-color: #023552;
+  background-image: url("/img/topimage.png")
 }
 
 a {
@@ -28,12 +29,12 @@ a {
 
 img {
   max-width: 100%;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   margin: 0 auto;
 }
 
 input, textarea {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -46,10 +47,13 @@ input::-ms-clear, textarea::-ms-clear {
 Main components 
 
 -------------------------------- */
+#top-image{
+    
+}
+
 header[role=banner] {
-  position: fixed;
-  height: 60px;
-  background: #2c2c2c;
+  height: 50px;
+  background: #E3E3E3;
   width:  100%;
   z-index: 3;
 }
@@ -92,7 +96,7 @@ header[role=banner]::after {
 }
 @media only screen and (min-width: 1025px) {
   header[role=banner] {
-    height: 60px;
+    height: 50px;
   }
   header[role=banner] #cd-logo {
     margin: 0;
@@ -104,7 +108,7 @@ header[role=banner]::after {
   }
   header[role=banner] #cd-logo img {
     display: block;
-    max-width: 100px;
+    max-width: 40px;
     margin: 10px 50px;
   }
 }
@@ -120,11 +124,13 @@ header[role=banner] .lateral-menu-is-open {
 
 header[role=secondnav] {
     height: 30px;
-    background-color: #2594EF;
+    background-color: #1D6096;
     position: absolute;
-    margin-top: 60px;
     width: 100%;
     z-index:  2;
+    -moz-box-shadow: inset 1px 1px 5px #000000;
+    -webkit-box-shadow: inset 1px 1px 5px #000000;
+    box-shadow: inset 1px 1px 5px #000000;
 }
 header[role=secondnav] ul {
     padding: 5px;
@@ -613,7 +619,6 @@ h1 {
   align-items: stretch;
   width: 100%;
   margin: auto;
-  margin-top: 90px;
 }
 button{
   width: 50px;
@@ -646,6 +651,7 @@ button:hover {
   flex: 1;
   overflow: hidden;
   z-index: 1;
+  height: 315px;
 }
 .items {
   list-style-type: none;
@@ -699,7 +705,7 @@ button:hover {
   min-height: 100%;
   position: absolute;
   background-color: #1a1a1a;
-  /* padding-top: 50px; */
+  
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
@@ -714,15 +720,26 @@ button:hover {
   width: calc(100% - 10vw);
   box-shadow: -2px -2px 6px #828692, 2px 2px 6px #828692;
   background: #FFFFFF;
-box-shadow: 0px 4px 20px rgba(16, 62, 102, 0.11);
-border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(16, 62, 102, 0.11);
+  border-radius: 10px;
+}
+
+.cd-main-content::before {
+  content: '';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(20px);
+  z-index: -1;
 }
 
 @media only screen and (min-width: 1025px) {
   .cd-main-content {
-    padding-top: 70px;
-    margin: 400px 10vw 10em;
-    background-color:  #efefef;
+    margin: 370px 10vw 10em;
+    background-color: #efefef7a;
     position:  absolute;
     width:  80%;
   }
@@ -773,7 +790,7 @@ border-radius: 10px;
     flex-direction: column;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    height: 180px;
+    height: 300px;
     border-radius: 5px;
   }
   .container {
@@ -786,15 +803,15 @@ border-radius: 10px;
 
 
 .card header {
-  background-color: rgba(16, 16, 16, 0.7);
   padding: 1em;
-  color: #FFF;
+  color: #000;
+  font-size: 1.5rem;
 }
 @media (min-width: 1025px) {
   .card header {
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    padding-left: 16em;
+    padding-left: 12em;
     border-radius: 5px 5px 0 5px;
   }
 }
@@ -804,7 +821,7 @@ border-radius: 10px;
 }
 @media (min-width: 1025px) {
   .card .transcript {
-    padding-left: 16em;
+    padding-left: 18em;
     padding-right: 30px;
     height: 55.5%;
     text-align:  justify;
@@ -816,10 +833,10 @@ border-radius: 10px;
 }
 @media (min-width: 1025px) {
   .card .footy {
-    /* padding-left: 16em; */
+    padding-left: 18em;
     display:block;
     border-radius: 0 0 5px;
-    text-align: right;
+    text-align: laft;
   }
  .card .footy img{
   width: 30px!important;
@@ -836,13 +853,14 @@ border-radius: 10px;
 }
 @media (min-width: 1025px) {
   .card .image {
-    width: 240px;
-    height: 180px;
+    width: 230px;
+    height: 250px;
     padding-bottom: 0;
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
+    margin: 25px;
   }
 }
 
@@ -1018,4 +1036,300 @@ border-radius: 10px;
     0%{background-position:49% 0%}
     50%{background-position:52% 100%}
     100%{background-position:49% 0%}
+}
+
+nav[role="navigation"] {
+  text-align: center;
+}
+
+.cd-pagination {
+  width: 90%;
+  max-width: 768px;
+  margin: 2em auto 4em;
+  text-align: center;
+}
+.cd-pagination li {
+  /* hide numbers on small devices */
+  display: none;
+  margin: 0 .2em;
+}
+.cd-pagination li.button {
+  /* make sure prev next buttons are visible */
+  display: inline-block;
+}
+.cd-pagination a, .cd-pagination span {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* use padding and font-size to change buttons size */
+  padding: .6em .8em;
+  font-size: 1.6rem;
+}
+.cd-pagination a {
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25em;
+}
+.no-touch .cd-pagination a:hover {
+  background-color: #f2f2f2;
+}
+.cd-pagination a:active {
+  /* click effect */
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.cd-pagination a.disabled {
+  /* button disabled */
+  color: rgba(46, 64, 87, 0.4);
+  pointer-events: none;
+}
+.cd-pagination a.disabled::before, .cd-pagination a.disabled::after {
+  opacity: .4;
+}
+.cd-pagination .button:first-of-type a::before {
+  content: '\00ab  ';
+}
+.cd-pagination .button:last-of-type a::after {
+  content: ' \00bb';
+}
+.cd-pagination .current {
+  /* selected number */
+  background-color: #5E77FF;
+  border-color: #64a281;
+  color: #ffffff;
+  pointer-events: none;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pagination li {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-pagination {
+    margin: 4em auto 8em;
+  }
+}
+
+/* -------------------------------- 
+
+No space - remove distance between list items
+
+-------------------------------- */
+.cd-pagination.no-space {
+  width: auto;
+  max-width: none;
+  display: inline-block;
+  border-radius: 0.25em;
+  border: 1px solid #e6e6e6;
+}
+.cd-pagination.no-space:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-pagination.no-space li {
+  margin: 0;
+  float: left;
+  background-color:  #FFFFFF;
+  border-right: 1px solid #e6e6e6;
+}
+.cd-pagination.no-space li:last-of-type {
+  border-right: none;
+}
+.cd-pagination.no-space a, .cd-pagination.no-space span {
+  float: left;
+  border-radius: 0;
+  padding: .8em 1em;
+  border: none;
+}
+.cd-pagination.no-space li:first-of-type a {
+  border-radius: 0.25em 0 0 0.25em;
+}
+.cd-pagination.no-space li:last-of-type a {
+  border-radius: 0 0.25em 0.25em 0;
+}
+
+/* -------------------------------- 
+
+move buttons - move prev and next buttons to the sides
+
+-------------------------------- */
+.cd-pagination.move-buttons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-pagination.move-buttons .button:first-of-type {
+  float: left;
+}
+.cd-pagination.move-buttons .button:last-of-type {
+  float: right;
+}
+
+.cd-pagination.no-space.move-buttons {
+  width: 90%;
+  max-width: 768px;
+  display: block;
+  overflow: hidden;
+}
+.cd-pagination.no-space.move-buttons li {
+  float: none;
+  border: none;
+}
+.cd-pagination.no-space.move-buttons a, .cd-pagination.no-space.move-buttons span {
+  float: none;
+}
+
+/* -------------------------------- 
+
+custom icons - customize the small arrow inside the next and prev buttons 
+
+-------------------------------- */
+.cd-pagination.custom-icons .button a {
+  position: relative;
+}
+.cd-pagination.custom-icons .button:first-of-type a {
+  padding-left: 2.4em;
+}
+.cd-pagination.custom-icons .button:last-of-type a {
+  padding-right: 2.4em;
+}
+.cd-pagination.custom-icons .button:first-of-type a::before,
+.cd-pagination.custom-icons .button:last-of-type a::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  /* set size for custom icons */
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  /* set margin-top = icon height/2 */
+  margin-top: -8px;
+  background: transparent url("../img/cd-icon-arrow-1.svg") no-repeat center center;
+}
+.cd-pagination.custom-icons .button:first-of-type a::before {
+  left: .8em;
+}
+.cd-pagination.custom-icons .button:last-of-type a::after {
+  right: .8em;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* -------------------------------- 
+
+custom buttons - replace prev and next buttons text with a custom icon 
+
+-------------------------------- */
+.cd-pagination.custom-buttons a, .cd-pagination.custom-buttons span {
+  vertical-align: middle;
+}
+.cd-pagination.custom-buttons .button a {
+  /* set custom width */
+  width: 40px;
+  /* image replacement */
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  color: transparent;
+  background-image: url("../img/cd-icon-arrow-2.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.cd-pagination.custom-buttons .button:last-of-type a {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.no-touch .cd-pagination.custom-buttons .button:last-of-type a:active {
+  -webkit-transform: scale(0.9) rotate(180deg);
+  -moz-transform: scale(0.9) rotate(180deg);
+  -ms-transform: scale(0.9) rotate(180deg);
+  -o-transform: scale(0.9) rotate(180deg);
+  transform: scale(0.9) rotate(180deg);
+}
+
+.cd-pagination.no-space.custom-buttons .button:last-of-type a {
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+/* -------------------------------- 
+
+animated buttons - animate the text inside prev and next buttons 
+
+-------------------------------- */
+.cd-pagination.animated-buttons a, .cd-pagination.animated-buttons span {
+  padding: 0 1.4em;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+.cd-pagination.animated-buttons .button a {
+  position: relative;
+  padding: 0 2em;
+}
+.cd-pagination.animated-buttons .button:first-of-type a::before,
+.cd-pagination.animated-buttons .button:last-of-type a::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  right: auto;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-pagination.animated-buttons .button:last-of-type a::after {
+  -webkit-transform: translateX(-50%) rotate(180deg);
+  -moz-transform: translateX(-50%) rotate(180deg);
+  -ms-transform: translateX(-50%) rotate(180deg);
+  -o-transform: translateX(-50%) rotate(180deg);
+  transform: translateX(-50%) rotate(180deg);
+}
+.cd-pagination.animated-buttons i {
+  display: block;
+  height: 100%;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.no-touch .cd-pagination.animated-buttons .button a:hover i {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.no-touch .cd-pagination.animated-buttons .button:first-of-type a:hover::before {
+  -webkit-transform: translateX(-50%) translateY(-50px);
+  -moz-transform: translateX(-50%) translateY(-50px);
+  -ms-transform: translateX(-50%) translateY(-50px);
+  -o-transform: translateX(-50%) translateY(-50px);
+  transform: translateX(-50%) translateY(-50px);
+}
+
+.no-touch .cd-pagination.animated-buttons .button:last-of-type a:hover::after {
+  -webkit-transform: translateX(-50%) rotate(180deg) translateY(50px);
+  -moz-transform: translateX(-50%) rotate(180deg) translateY(50px);
+  -ms-transform: translateX(-50%) rotate(180deg) translateY(50px);
+  -o-transform: translateX(-50%) rotate(180deg) translateY(50px);
+  transform: translateX(-50%) rotate(180deg) translateY(50px);
 }
