@@ -23,14 +23,15 @@ jQuery(document).ready(function ($) {
 		this.bindEvents();
 	}
 	$(document).ready(function () {
-		$("#form1").click(function () {
+		$("#form1").click(function (event) {
+            event.preventDefault();
 			$("#submit-form").submit();
 		});
 	});
 
     $(document).ready(function () {
 		$("#form2").click(function () {
-			$("#submit-form").submit();
+			$("#submit-form2").submit();
 		});
 	});
 
@@ -311,8 +312,9 @@ function addPersInfo() {
 	edo.push(document.getElementById("estadods").value);
 	telep.push(document.getElementById("telephone").value);
 	mail.push(document.getElementById("email").value);
-	var table = document.getElementById("pInfoTable");
-	var row = table.insertRow(rowCount);
+    var table = document.getElementById("pInfoTable");
+	var row = table.deleteRow(rowCount);
+    row = table.insertRow(rowCount);
 	var cell1 = row.insertCell(0);
 	var cell2 = row.insertCell(1);
 	var cell3 = row.insertCell(2);
@@ -335,7 +337,7 @@ function addPersInfo() {
 	cell9.innerHTML = telep[rowCount - 1];
 	cell10.innerHTML = mail[rowCount - 1];
 	cell11.innerHTML = '<td class="fa fa-trash"></td>';
-	rowCount++;
+    rowCount++;
 }
 
 function addRefInfo() {
@@ -349,7 +351,8 @@ function addRefInfo() {
 	rt2.push(document.getElementById("r-telephone-2").value);
 	et2.push(document.getElementById("r-email-2").value);
 	var table2 = document.getElementById("pInfoRef");
-	var row = table2.insertRow(rowCount2);
+	var row = table2.deleteRow(rowCount2);
+    row = table2.insertRow(rowCount2);
 	var cell1a = row.insertCell(0);
 	var cell2a = row.insertCell(1);
 	var cell3a = row.insertCell(2);

@@ -132,10 +132,24 @@ Main Components
   overflow: hidden;
 }
 
+.cd-builder-steps::after {
+  content: "";
+  background: url(/axtel/img/axtelbot.png);
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: 100%;
+  background-position: 0 -100px;
+}
+
 .cd-builder-steps {
   position: relative;
   height: 100%;
-  padding:  15vh 0 140px;
+  padding: 2vh 0 0 0;
 }
 .cd-builder-steps > ul {
   height: 100%;
@@ -261,10 +275,11 @@ Step content - basic style
   /* this is the animation of the selected step */
   opacity: 1;
   -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
   -webkit-animation: cd-right-to-center .5s .2s backwards;
-          animation: cd-right-to-center .5s .2s backwards;
+  animation: cd-right-to-center .5s .2s backwards;
+  margin-top: 30px;
 }
 .move-left .cd-step-content {
   /* this is the animation of a section moving left - selection already made */
@@ -302,6 +317,7 @@ Step content - basic style
   .cd-step-content .options-list.cd-col-2 > li:nth-of-type(2n) {
     margin-right: 0;
   }
+
 }
 @media only screen and (min-width: 1024px) {
   .cd-step-content {
@@ -323,7 +339,17 @@ Step content - basic style
   .cd-step-content {
   }
 }
-
+.cd-step-content::before {
+  content: '';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(20px);
+  z-index: -1;
+}
 @-webkit-keyframes cd-right-to-center {
   0% {
     opacity: 0;
@@ -537,7 +563,7 @@ Speed Step - style
 .cd-product-previews {
   position: relative;
   margin: 4.5em auto;
-  box-shadow: -2px -2px 4px #4281FF, 2px 2px 4px #4281FF, inset 2px 2px 4px #4281FF, inset -2px -2px 4px #4281FF;
+  box-shadow: -2px -2px 4px #e32527, 2px 2px 4px #e32527, inset 2px 2px 4px #e32527, inset -2px -2px 4px #e32527;
   width: 300px;
 }
 .cd-product-previews > li {
@@ -565,7 +591,7 @@ Speed Step - style
 }
 @media only screen and (min-width: 1024px) {
   .cd-product-previews {
-    margin: 0 auto 2em;
+    /* margin: 0 auto 2em; */
   }
 }
 @media only screen and (min-width: 1480px) and (min-height: 850px) {
@@ -754,7 +780,7 @@ Summary Step - style
 }
 .cd-builder-steps .summary-list .product-preview {
   display: block;
-  max-width: 700px;
+  max-width: 200px;
   width: 100%;
   margin-bottom: 2em;
 }
@@ -1010,11 +1036,11 @@ Builder fixed bottom summary
   .cd-builder-footer .alert {
     display: block;
     position: absolute;
-    top: 120%;
+    top: 150%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     -webkit-transition: top .2s;
     transition: top .2s;
     background: #24221F;
