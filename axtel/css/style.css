@@ -135,7 +135,6 @@ Main Components
 .cd-builder-steps {
   position: relative;
   height: 100%;
-  overflow: hidden;
   padding:  15vh 0 140px;
 }
 .cd-builder-steps > ul {
