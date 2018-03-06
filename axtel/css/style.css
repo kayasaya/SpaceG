@@ -740,7 +740,7 @@ Summary Step - style
 .cd-builder-steps .summary-list h2 {
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   letter-spacing: .1em;
 }
 .cd-builder-steps .summary-list h2::before {
