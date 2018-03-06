@@ -47,13 +47,13 @@
 	</section>
 </li>
 
-<li data-selection="infopersonal" class="builder-step first-load">
+<li data-selection="infopersonal" class="builder-step first-load disabled2">
 	<section class="cd-step-content">
     <div id="form">
-        <form name="contact" action="#" method="post" id="register_form" onsubmit="event.preventDefault() & addPersInfo()">
+        <form name="contact" action="#" method="post" id="register_form" onsubmit="event.preventDefault() & addPersInfo()  ">
 				<fieldset>
 					<div class="input-container" id="first-name">
-						<input autofocus type="text" id="i-first-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
+						<input autofocus type="text" id="i-first-name" name="i-first-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
                         <label for="i-first-name" class="hide">Nombre(s)</label>
 					</div>
 					<div class="input-container" id="last-name">
@@ -62,7 +62,7 @@
 					</div>
                     <div class="input-container" id="dobe">
 						<input type="text" id="dob" required>
-                        <label for="dob" class="hide">Fecha de nacimiento</label>
+                        <label for="dob" class="hide">Fecha de nacimiento (DD/MM/AAAA)</label>
 					</div>
 					<div class="input-container" id="address">
 						<input type="text" id="calle" class="form-control name" pattern="^[a-zA-Z][a-zA-Z0-9-_\. ]{1,30}$" title="(e.j. Insurgentes sur)" required>
@@ -81,10 +81,10 @@
                         <label for="delegacion" class="hide">Municipio/Delegacion</label>
 					</div>
 					<div class="input-container" id="last-name">
-                        <select id="StateSelect" class="dropdown" id="edo" required>
-                            <option value="Edo"disabled selected>Estado</option>
-                            <option value="CDMX">CDMX</option>
-                            <option value="Monterrey">Monterrey</option>
+                        <select type="text" class="dropdown" name="estadods" id="estadods" required>
+                            <option value="Edo" disabled selected>Estado</option>
+                            <option value="CDMX" >CDMX</option>
+                            <option value="Monterrey" >Monterrey</option>
                         </select>
 					</div>
 					<div class="input-container" id="first-name">
@@ -96,7 +96,7 @@
 						<label for="email" class="hide">Email</label>
 					</div>
 
-                <button type="submit">Validar Informacion</button>
+                <button type="submit" id="submit-form" class="">Validar Informacion</button>
                 
 				</fieldset>
 			</form>
@@ -154,27 +154,9 @@
 <!-- INFORMACION QUE SE A A ENVIAR AL CORREO ELECTRONICO -->
 <li data-selection="summary" class="builder-step first-load" id="imagesave">
 	<section class="cd-step-content" style="background-color: #f2f2f2">
-		<header>
-			<h1>Resumen</h1>
-			<span class="steps-indicator">Paso <b>7</b> de 7</span>
-		</header>
-		
 		<ul class="summary-list">
 			<li>
-				<h2>Plan</h2>
-
 				<img src="/axtel/img/product01_col01.jpg" alt="Axtel Xtremo" class="product-preview">
-				
-				<h3>Axtel TV + Internet</h3>
-			</li>
-
-			<li data-summary="speeds">
-				<h2>Velocidad</h2>
-				
-				<span class="summary-speed">
-					<em class="speed-swatch" data-speed="red"></em>
-					<em class="speed-label">Red Passion</em>
-				</span>
 			</li>
 			<li data-summary="infopersonal">
 				<h2>Informacion Personal</h2>
@@ -225,3 +207,55 @@
 		</ul>
 	</section>
 </li>
+<script type="text/javascript" language="javascript">
+    var date = document.getElementById('dob');
+
+                    function checkValue(str, max) {
+                        if (str.charAt(0) !== '0' || str == '00') {
+                            var num = parseInt(str);
+                            if (isNaN(num) || num <= 0 || num > max) num = 1;
+                            str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
+                        };
+                        return str;
+                    };
+                    date.addEventListener('input', function(e) {
+                        this.type = 'text';
+                        var input = this.value;
+                        if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+                        var values = input.split('/').map(function(v) {
+                            return v.replace(/\D/g, '')
+                        });
+                        if (values[0]) values[0] = checkValue(values[0], 31);
+                        if (values[1]) values[1] = checkValue(values[1], 12);
+                        var output = values.map(function(v, i) {
+                            return v.length == 2 && i < 2 ? v + ' / ' : v;
+                        });
+                        this.value = output.join('').substr(0, 14);
+                    });
+
+                    date.addEventListener('blur', function(e) {
+                        this.type = 'text';
+                        var input = this.value;
+                        var values = input.split('/').map(function(v, i) {
+                            return v.replace(/\D/g, '')
+                        });
+                        var output = '';
+  
+                        if (values.length == 3) {
+                            var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+                            var month = parseInt(values[0]) - 1;
+                            var day = parseInt(values[1]);
+                            var d = new Date(year, month, day);
+                            if (!isNaN(d)) {
+                                document.getElementById('result').innerText = d.toString();
+                                var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
+                                output = dates.map(function(v) {
+                                    v = v.toString();
+                                    return v.length == 1 ? '0' + v : v;
+                                }).join(' / ');
+                            };
+                        };
+                        this.value = output;
+                    });
+
+</script>

@@ -28,6 +28,13 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+    $(document).ready(function () {
+		$("#form2").click(function () {
+			$("#submit-form").submit();
+		});
+	});
+
+    
 	ProductBuilder.prototype.bindEvents = function () {
 		var self = this;
 
