@@ -26,6 +26,11 @@ body {
   background-color: #f2f2f2;
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+} 
+
 a {
   color: #5D7C89;
   text-decoration: none;
@@ -131,6 +136,7 @@ Main Components
   position: relative;
   height: 100%;
   overflow: hidden;
+  padding:  15vh 0 140px;
 }
 .cd-builder-steps > ul {
   height: 100%;
@@ -168,11 +174,10 @@ Step content - basic style
 
 -------------------------------- */
 .cd-step-content {
-  padding: 1.8em 0 3em;
-  opacity: 0;
+  :
   /* this is the animation of a section moving right (go back to a prev step) - selection already made */
   -webkit-animation: cd-center-to-right .5s 0s backwards;
-          animation: cd-center-to-right .5s 0s backwards;
+  animation: cd-center-to-right .5s 0s backwards;
   margin-top: 5em;
 }
 .cd-step-content header {
@@ -302,7 +307,6 @@ Step content - basic style
 @media only screen and (min-width: 1024px) {
   .cd-step-content {
     /* this padding takes care of both top and bottom fixed navigations */
-    padding: 15vh 0 140px;
     max-width: 1000px;
     margin: 0 auto;
     overflow:  hidden;
@@ -534,12 +538,12 @@ Speed Step - style
 .cd-product-previews {
   position: relative;
   margin: 4.5em auto;
-  box-shadow: -2px -2px 4px #4281FF, 2px 2px 4px #4281FF, inset 2px 2px 4px #d584ff, inset -2px -2px 4px #D584FF;
+  box-shadow: -2px -2px 4px #4281FF, 2px 2px 4px #4281FF, inset 2px 2px 4px #4281FF, inset -2px -2px 4px #4281FF;
   width: 300px;
 }
 .cd-product-previews > li {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
   width: 100%;
   opacity: 0;

@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/axtel/css/extra.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="/axtel/css/style.css"> <!-- Resource style -->
   	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="/axtel/js/html2canvas.js"></script>
 
 	<title>SpaceGaming | Axtel</title>
 </head>
@@ -33,7 +34,7 @@
     <header role="secondnav">
     			<ul>
 				<!-- inser more links here -->
-				<li><a href="#0">Noticias</a></li>
+				<li><a href="/index.html">Noticias</a></li>
                 <li><a>|</a></li>
 				<li><a href="#0">Comunidad</a></li>
                 <li><a>|</a></li>
@@ -46,29 +47,10 @@
     </header>
 
     <!-- Submenu -->
-    <header class="main-header">
-		<nav class="cd-builder-main-nav disabled">
-			<ul>
-				<li class="active"><a href="#models">Plan</a></li>
-				<li><a href="#velocidad">Velocidad</a></li>
-				<li><a href="#infopersonal">Información Personal</a></li>
-				<li><a href="#referencias">Referencias</a></li>
-				<li><a href="#resumen">Resumen</a></li>
-			</ul>
-		</nav>
-    </header>
-	<header >		
-	</header>
-
 	<div class="cd-builder-steps">
 		<ul>
 			<li data-selection="models" class="active builder-step">
 				<section class="cd-step-content">
-					<header>
-						<h1>Elige Plan</h1>
-						<span class="steps-indicator">Paso <b>1</b> of 4</span>
-					</header>
-
 					<ul class="models-list options-list cd-col-2">
 						<li class="js-option js-radio" data-price="449" data-model="internet">
 							<span class="name">Internet</span>
@@ -106,9 +88,9 @@
 					<ul>
 						<li class="visible"><a href="#0">Velocidad</a></li>
                         <li><a href="#0">Información</a></li>
-                        <li><a href="#0">Referencias</a></li>
+                        <li id="form1"><a href="validateForm1">Referencias</a></li>
                         <li><a href="#0">Resumen</a></li>
-						<li class="buy"><a href="#0">Contratar Ahora</a></li>
+						<li class="buy"><a href="#0" id="save_image_locally">Contratar Ahora</a></li>
 					</ul>
 				</li>
 				<li class="prev nav-item">

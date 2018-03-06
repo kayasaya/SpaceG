@@ -22,6 +22,11 @@ jQuery(document).ready(function($){
 		// bind builder events
 		this.bindEvents();
 	}
+$(document).ready(function () {
+  $("#form1").click(function () {
+    $("#submit-form").submit();
+  });
+});
 
 	ProductBuilder.prototype.bindEvents = function() {
 		var self = this;
@@ -84,7 +89,7 @@ jQuery(document).ready(function($){
 			this.steps.eq(actualStep-1).removeClass('active back move-left');
 			this.steps.eq(nextStep).addClass('active back').removeClass('move-left');
 		}
-	}
+    }
 
 	ProductBuilder.prototype.updatePrimaryNav = function(nextStep) {
 		this.mainNavigation.find('li').eq(nextStep).addClass('active').siblings('.active').removeClass('active');
@@ -243,4 +248,115 @@ jQuery(document).ready(function($){
 			new ProductBuilder($(this));
 		});
 	}
+    
 });
+
+
+  $('#save_image_locally').click(function(){
+    html2canvas($('#imagesave'), 
+    {
+      onrendered: function (canvas) {
+        var a = document.createElement('a');
+        var height = 100;
+        a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+        a.download = 'contratacion.jpg';
+        a.click();
+      }
+    });
+  });
+
+                    var ipname = [];
+                    var iplname = [];
+                    var dobs = [];
+                    var addr = [];
+                    var num = [];
+                    var numint = [];
+                    var dele = [];
+                    var edo = [];
+                    var telep = [];
+                    var mail = [];
+                    var fn1 = [];
+                    var ln1 = [];
+                    var rt1 = [];
+                    var et1 = [];
+                    var fn2 = [];
+                    var ln2 = [];
+                    var rt2 = [];
+                    var et2 = [];
+                    var rowCount = 1;
+                    var rowCount2 = 1;
+                    function addPersInfo() {
+                        var temp = 'style .fa fa-trash';
+                        ipname.push(document.getElementById("i-first-name").value);
+                        iplname.push(document.getElementById("i-last-name").value);
+                        dobs.push(document.getElementById("dob").value);
+                        addr.push(document.getElementById("calle").value);
+                        num.push(document.getElementById("numb").value);
+                        numint.push(document.getElementById("numbint").value);
+                        dele.push(document.getElementById("delegacion").value);
+                        edo.push(document.getElementById("estadods").value);
+                        telep.push(document.getElementById("telephone").value);
+                        mail.push(document.getElementById("email").value);
+                        var table = document.getElementById("pInfoTable");
+                        var row = table.insertRow(rowCount);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
+                        var cell5 = row.insertCell(4);
+                        var cell6 = row.insertCell(5);
+                        var cell7 = row.insertCell(6);
+                        var cell8 = row.insertCell(7);
+                        var cell9 = row.insertCell(8);
+                        var cell10 = row.insertCell(9);
+                        var cell11 = row.insertCell(10);
+                        cell1.innerHTML = ipname[rowCount - 1];
+                        cell2.innerHTML = iplname[rowCount - 1];
+                        cell3.innerHTML = dobs[rowCount - 1];
+                        cell4.innerHTML = addr[rowCount - 1];
+                        cell5.innerHTML = num[rowCount - 1];
+                        cell6.innerHTML = numint[rowCount - 1];
+                        cell7.innerHTML = dele[rowCount - 1];
+                        cell8.innerHTML = edo[rowCount - 1];
+                        cell9.innerHTML = telep[rowCount - 1];
+                        cell10.innerHTML = mail[rowCount - 1];
+                        cell11.innerHTML='<td class="fa fa-trash"></td>';
+                        rowCount++;
+                    }
+    
+                    function addRefInfo() {
+                        var temp = 'style .fa fa-trash';
+                        fn1.push(document.getElementById("first-name-1").value);
+                        ln1.push(document.getElementById("last-name-1").value);
+                        rt1.push(document.getElementById("r-telephone-1").value);
+                        et1.push(document.getElementById("r-email-1").value);
+                        fn2.push(document.getElementById("first-name-2").value);
+                        ln2.push(document.getElementById("last-name-2").value);
+                        rt2.push(document.getElementById("r-telephone-2").value);
+                        et2.push(document.getElementById("r-email-2").value);
+                        var table2 = document.getElementById("pInfoRef");
+                        var row = table2.insertRow(rowCount2);
+                        var cell1a = row.insertCell(0);
+                        var cell2a = row.insertCell(1);
+                        var cell3a = row.insertCell(2);
+                        var cell4a = row.insertCell(3);
+                        var cell5a = row.insertCell(4);
+                        var cell6a = row.insertCell(5);
+                        var cell7a = row.insertCell(6);
+                        var cell8a = row.insertCell(7);
+                        var cell9a = row.insertCell(8);
+                        cell1a.innerHTML = fn1[rowCount2 - 1];
+                        cell2a.innerHTML = ln1[rowCount2 - 1];
+                        cell3a.innerHTML = rt1[rowCount2 - 1];
+                        cell4a.innerHTML = et1[rowCount2 - 1];
+                        cell5a.innerHTML = fn2[rowCount2 - 1];
+                        cell6a.innerHTML = ln2[rowCount2 - 1];
+                        cell7a.innerHTML = rt2[rowCount2 - 1];
+                        cell8a.innerHTML = et2[rowCount2 - 1];
+                        cell8a.innerHTML = et2[rowCount2 - 1];
+                        cell9a.innerHTML='<td class="fa fa-trash"></td>';
+                        rowCount2++;
+                    }
+
+    
+                    
