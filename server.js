@@ -15,7 +15,8 @@ var transporter = nodemailer.createTransport({
 })
 
 app.use(bodyParser.urlencoded({
-	extended: false
+	extended: false,
+	limit: "50mb"
 }))
 
 app.use("/index/css", express.static(__dirname + "/css"))
@@ -51,7 +52,7 @@ app.post("/sendImage", (req, res) => {
 
 	//Sending email
 	var mailOptions = {
-		from: "4luch3rd1@gmail.com",
+		from: "gherrera@luckyintelligence.com",
 		to: "mgonzalez@luckyintelligence.com, gyaniz@luckyintelligence.com, gherrera@luckyintelligence.com, ksahali@luckyintelligence.com",
 		subject: "Imagen de contratación Axtel",
 		text: "Cuerpo de prueba del correo",
@@ -75,4 +76,4 @@ app.post("/sendImage", (req, res) => {
 	res.send("200")
 })
 
-app.listen(8080, () => console.log("Listening to 80"))
+app.listen(80, () => console.log("Listening to 80"))
