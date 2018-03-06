@@ -25,13 +25,13 @@
 	</section>
 </li>
 
-<li data-selection="infopersonal" class="builder-step first-load">
+<li data-selection="infopersonal" class="builder-step first-load disabled2">
 	<section class="cd-step-content">
     <div id="form">
-        <form name="contact" action="#" method="post" id="register_form" onsubmit="event.preventDefault() & addPersInfo()">
+        <form name="contact" action="#" method="post" id="register_form" onsubmit="event.preventDefault() & addPersInfo()  ">
 				<fieldset>
 					<div class="input-container" id="first-name">
-						<input autofocus type="text" id="i-first-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
+						<input autofocus type="text" id="i-first-name" name="i-first-name" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
                         <label for="i-first-name" class="hide">Nombre(s)</label>
 					</div>
 					<div class="input-container" id="last-name">
@@ -40,7 +40,7 @@
 					</div>
                     <div class="input-container" id="dobe">
 						<input type="text" id="dob" required>
-                        <label for="dob" class="hide">Fecha de nacimiento</label>
+                        <label for="dob" class="hide">Fecha de nacimiento (DD/MM/AAAA)</label>
 					</div>
 					<div class="input-container" id="address">
 						<input type="text" id="calle" class="form-control name" pattern="^[a-zA-Z][a-zA-Z0-9-_\. ]{1,30}$" title="(e.j. Insurgentes sur)" required>
@@ -59,10 +59,10 @@
                         <label for="delegacion" class="hide">Municipio/Delegacion</label>
 					</div>
 					<div class="input-container" id="last-name">
-                        <select id="StateSelect" class="dropdown" id="edo" required>
-                            <option value="Edo"disabled selected>Estado</option>
-                            <option value="CDMX">CDMX</option>
-                            <option value="Monterrey">Monterrey</option>
+                        <select type="text" class="dropdown" name="estadods" id="estadods" required>
+                            <option value="Edo" disabled selected>Estado</option>
+                            <option value="CDMX" >CDMX</option>
+                            <option value="Monterrey" >Monterrey</option>
                         </select>
 					</div>
 					<div class="input-container" id="first-name">
@@ -74,7 +74,7 @@
 						<label for="email" class="hide">Email</label>
 					</div>
 
-                <button type="submit">Validar Informacion</button>
+                <button type="submit" id="submit-form" class="">Validar Informacion</button>
                 
 				</fieldset>
 			</form>
@@ -130,30 +130,11 @@
 
 </li>
 <!-- INFORMACION QUE SE A A ENVIAR AL CORREO ELECTRONICO -->
-<li data-selection="summary" class="builder-step first-load">
-	<section class="cd-step-content">
-		<header>
-			<h1>Resumen</h1>
-			<span class="steps-indicator">Paso <b>7</b> de 7</span>
-		</header>
-		
+<li data-selection="summary" class="builder-step first-load" id="imagesave">
+	<section class="cd-step-content" style="background-color: #f2f2f2">
 		<ul class="summary-list">
 			<li>
-				<h2>Plan</h2>
-
 				<img src="/axtel/img/product01_col01.jpg" alt="Axtel Xtremo" class="product-preview">
-				
-				<h3>Axtel X-Tremo</h3>
-				
-			</li>
-
-			<li data-summary="speeds">
-				<h2>Velocidad</h2>
-				
-				<span class="summary-speed">
-					<em class="speed-swatch" data-speed="red"></em>
-					<em class="speed-label">Red Passion</em>
-				</span>
 			</li>
 			<li data-summary="infopersonal">
 				<h2>Informacion Personal</h2>
@@ -204,101 +185,8 @@
 		</ul>
 	</section>
 </li>
-
-<script>
-
-                    var ipname = [];
-                    var iplname = [];
-                    var dobs = [];
-                    var addr = [];
-                    var num = [];
-                    var numint = [];
-                    var dele = [];
-                    var edo = [];
-                    var telep = [];
-                    var mail = [];
-                    var fn1 = [];
-                    var ln1 = [];
-                    var rt1 = [];
-                    var et1 = [];
-                    var fn2 = [];
-                    var ln2 = [];
-                    var rt2 = [];
-                    var et2 = [];
-                    var rowCount = 1;
-                    function addPersInfo() {
-                        var temp = 'style .fa fa-trash';
-                        ipname.push(document.getElementById("i-first-name").value);
-                        iplname.push(document.getElementById("i-last-name").value);
-                        dobs.push(document.getElementById("dob").value);
-                        addr.push(document.getElementById("calle").value);
-                        num.push(document.getElementById("numb").value);
-                        numint.push(document.getElementById("numbint").value);
-                        dele.push(document.getElementById("delegacion").value);
-                        telep.push(document.getElementById("telephone").value);
-                        mail.push(document.getElementById("email").value);
-                        var table = document.getElementById("pInfoTable");
-                        var row = table.insertRow(rowCount);
-                        var cell1 = row.insertCell(0);
-                        var cell2 = row.insertCell(1);
-                        var cell3 = row.insertCell(2);
-                        var cell4 = row.insertCell(3);
-                        var cell5 = row.insertCell(4);
-                        var cell6 = row.insertCell(5);
-                        var cell7 = row.insertCell(6);
-                        var cell8 = row.insertCell(7);
-                        var cell9 = row.insertCell(8);
-                        var cell10 = row.insertCell(9);
-                        var cell11 = row.insertCell(10);
-                        cell1.innerHTML = ipname[rowCount - 1];
-                        cell2.innerHTML = iplname[rowCount - 1];
-                        cell3.innerHTML = dobs[rowCount - 1];
-                        cell4.innerHTML = addr[rowCount - 1];
-                        cell5.innerHTML = num[rowCount - 1];
-                        cell6.innerHTML = numint[rowCount - 1];
-                        cell7.innerHTML = dele[rowCount - 1];
-                        cell8.innerHTML = edo[rowCount - 1];
-                        cell9.innerHTML = telep[rowCount - 1];
-                        cell10.innerHTML = mail[rowCount - 1];
-                        cell11.innerHTML='<td class="fa fa-trash"></td>';
-                        rowCount++;
-                    }
-    
-                    function addRefInfo() {
-                        var temp = 'style .fa fa-trash';
-                        fn1.push(document.getElementById("first-name-1").value);
-                        ln1.push(document.getElementById("last-name-1").value);
-                        rt1.push(document.getElementById("r-telephone-1").value);
-                        et1.push(document.getElementById("r-email-1").value);
-                        fn2.push(document.getElementById("first-name-2").value);
-                        ln2.push(document.getElementById("last-name-2").value);
-                        rt2.push(document.getElementById("r-telephone-2").value);
-                        et2.push(document.getElementById("r-email-2").value);
-                        var table = document.getElementById("pInfoRef");
-                        var row = table.insertRow(rowCount);
-                        var cell1 = row.insertCell(0);
-                        var cell2 = row.insertCell(1);
-                        var cell3 = row.insertCell(2);
-                        var cell4 = row.insertCell(3);
-                        var cell5 = row.insertCell(4);
-                        var cell6 = row.insertCell(5);
-                        var cell7 = row.insertCell(6);
-                        var cell8 = row.insertCell(7);
-                        cell1.innerHTML = fn1[rowCount - 1];
-                        cell2.innerHTML = ln1[rowCount - 1];
-                        cell3.innerHTML = rt1[rowCount - 1];
-                        cell4.innerHTML = et1[rowCount - 1];
-                        cell5.innerHTML = fn2[rowCount - 1];
-                        cell6.innerHTML = ln2[rowCount - 1];
-                        cell7.innerHTML = rt2[rowCount - 1];
-                        cell8.innerHTML = et2[rowCount - 1];
-                        cell9.innerHTML='<td class="fa fa-trash"></td>';
-                        rowCount++;
-                    }
-
-    
-                    
-                    var date = document.getElementById('dob');
+<script type="text/javascript" language="javascript">
+    var date = document.getElementById('dob');
 
                     function checkValue(str, max) {
                         if (str.charAt(0) !== '0' || str == '00') {
@@ -315,8 +203,8 @@
                         var values = input.split('/').map(function(v) {
                             return v.replace(/\D/g, '')
                         });
-                        if (values[0]) values[0] = checkValue(values[0], 12);
-                        if (values[1]) values[1] = checkValue(values[1], 31);
+                        if (values[0]) values[0] = checkValue(values[0], 31);
+                        if (values[1]) values[1] = checkValue(values[1], 12);
                         var output = values.map(function(v, i) {
                             return v.length == 2 && i < 2 ? v + ' / ' : v;
                         });
@@ -347,4 +235,5 @@
                         };
                         this.value = output;
                     });
-                    </script>
+
+</script>
