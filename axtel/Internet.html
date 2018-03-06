@@ -86,15 +86,15 @@
 <li data-selection="refer" class="builder-step first-load">
 		<section class="cd-step-content">
     <div id="form2">
-        <form name="contact" action="#" method="post" id="register_form" onsubmit="event.preventDefault() & addRefInfo()">
+        <form name="form2" action="#" method="post" id="register_form" onsubmit="event.preventDefault() & addRefInfo()">
 				<fieldset>
                     <legend>Referencia 1</legend>
 					<div class="input-container" id="first-name">
-						<input autofocus type="text" id="first-name-1" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$" title="Escriba su nombre (e.j. Perez)" required>
+						<input autofocus type="text" id="first-name-1" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,20}$/u" title="Escriba su nombre (e.j. Perez)" required>
                         <label for="first-name" class="hide">Nombre(s)</label>
 					</div>
 					<div class="input-container" id="last-name">
-						<input type="text" id="last-name-1" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" title="Escriba su apellido (e.j. Perez)" required>
+						<input type="text" id="last-name-1" class="form-control name" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$/u" title="Escriba su apellido (e.j. Perez)" required>
                         <label for="last-name" class="hide">Apellido(s)</label>
 					</div>
 					<div class="input-container" id="first-name">
